@@ -50,7 +50,7 @@ function validPassword() {
 }
 
 function eyeDis() {
-	let src = "/img/icons/eye_def.svg";
+	let src = "/login/img/icons/eye_def.svg";
 	if (eye.getAttribute("src") == src) {
 		eye.setAttribute("src", "/login/img/icons/eye-dis.svg");
 		userPassSuccessInput.setAttribute("type", "text");
