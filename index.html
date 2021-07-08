@@ -1,0 +1,53 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+	<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+	<head>
+		<!-- Кодировка страницы -->
+		<meta charset="utf-8">
+		<!-- <meta http-equiv="Content-type" content="text/html;charset=UTF-8" /> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Подключаем CSS -->
+		<link rel="stylesheet" href="css/style.css" />
+		<!-- Заголовок страницы в браузере -->
+		<title>Заголовок</title>
+	</head>
+	<!-- Отображаемое тело страницы -->
+	<body>
+		<div class="login">
+			<div class="container">
+				<div class="login__header">
+					<div class="login__image">
+						<img src="img/icons/duet-logo.svg" alt="">
+					</div>
+					<div class="login__text">
+						<p>Вхід</p>
+					</div>
+				</div>
+				<div class="login__body">
+					<form action="#">	
+						<div class="login__row">
+							<div class="login__userenter">
+								<div id="usernameSuccess" class="login__username">
+									<p>Логін</p>
+									<input  type="text" pattern="(\w{4,})|([a-z_]{4,})" placeholder="username">
+								</div>
+								<div id="userpassSuccess" class="login__userpass login__userpass_eye">
+									<p>Пароль</p>
+									<input  type="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" placeholder="********">
+									<img  src="/img/icons/eye_def.svg" alt="eye">
+								</div>
+							</div>
+							<div class="login__btn">
+								<button type="submit">Вхід</button>
+							</div>
+						</div>
+					</form>	
+				</div>
+			</div>
+		</div>
+		<div class="errors-container"></div>
+	</body>
+	<script src="js/script.js"></script>
+</html>
