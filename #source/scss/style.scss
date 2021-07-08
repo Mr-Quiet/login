@@ -42,7 +42,7 @@ body {
 	  
 	&__header {
 		height: 200px;
-		background:linear-gradient(rgba($blue, .75),rgba($blue, .75)), url("/img/bg/duet_background.jpg") center/cover no-repeat;
+		background:linear-gradient(rgba($blue, .75),rgba($blue, .75)), url("/login/img/bg/duet_background.jpg") center/cover no-repeat;
 	}
 
 	&__image {
@@ -179,7 +179,7 @@ body {
 				position: relative;
 				top: 3px;
 				margin-left: 10px;
-				background: url("/img/icons/arrow.png") no-repeat;
+				background: url("/login/img/icons/arrow.png") no-repeat;
 				width: 30px;
 				height: 25px;				
 			}
