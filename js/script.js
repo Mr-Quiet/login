@@ -52,10 +52,10 @@ function validPassword() {
 function eyeDis() {
 	let src = "/img/icons/eye_def.svg";
 	if (eye.getAttribute("src") == src) {
-		eye.setAttribute("src", "/img/icons/eye-dis.svg");
+		eye.setAttribute("src", "/login/img/icons/eye-dis.svg");
 		userPassSuccessInput.setAttribute("type", "text");
 	} else {
-		eye.setAttribute("src", "/img/icons/eye_def.svg");
+		eye.setAttribute("src", "/login/img/icons/eye_def.svg");
 		userPassSuccessInput.setAttribute("type", "password");
 	}
 }
