@@ -122,32 +122,13 @@ body {
 		display: flex;
 		justify-content: space-between;
 		position: relative;
-		// &_eye::after {
-		// 	content: '';
-		// 	background: url("/img/icons/eye.png") no-repeat;
-		// 	width: 30px;
-		// 	height: 20px;
-		// 	position: absolute;
-		// 	top: 10px;
-		// 	right: 10px;
-		// 	cursor: pointer;
-		// }
+		
 		img {
 			position: absolute;
 			top: 0;
 			right: 0;
 			cursor: pointer;
 		}
-		//  &_eye-dis::after {
-		// 	content: '';
-		// 	background: url("/img/icons/eye-dis.svg") no-repeat;
-		// 	width: 30px;
-		// 	height: 20px;
-		// 	position: absolute;
-		// 	top: 10px;
-		// 	right: 10px;
-		// 	cursor: pointer;
-		// }
 		&_success {
 			input {
 				border-color: green;
@@ -301,7 +282,7 @@ body {
 			flex-direction: column;
 
 			img {
-				top: 34px;
+				top: 23px;
 			}
 		}
 
@@ -358,7 +339,7 @@ body {
 	}
 	&__userpass {
 		img {
-			top: 32px;
+			top: 21px;
 		}
 	}
 }
