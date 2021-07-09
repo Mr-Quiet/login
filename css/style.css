@@ -474,7 +474,7 @@ body {
             flex-direction: column;
   }
   .login__userpass img {
-    top: 34px;
+    top: 23px;
   }
   .login__btn button {
     font-size: 24px;
@@ -537,7 +537,7 @@ body {
     padding: 15px;
   }
   .login__userpass img {
-    top: 32px;
+    top: 21px;
   }
 }
 
