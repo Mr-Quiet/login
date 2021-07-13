@@ -7,18 +7,21 @@ $blue: #033977;
 	font-weight: normal;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: 'Calibri';
 	src: url('../fonts/CALIBRIB.woff') format('woff'), url('../fonts/CALIBRIB.woff2') format('woff2'), url('../fonts/CALIBRIB.ttf') format('truetype'), url('../fonts/CALIBRIB.otf') format('OpenType');
 	font-weight: 700;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: "Century Gothic";
 	src: url('../fonts/GOTHIC.woff') format('woff'), url('../fonts/GOTHIC.woff2') format('woff2'), url('../fonts/GOTHIC.TTF') format('truetype'), url('../fonts/GOTHIC.otf') format('OpenType');
 	font-weight: normal;
 	font-style: normal;
 }
+
 @font-face {
 	font-family: "Century Gothic";
 	src: url('../fonts/GOTHICB.woff') format('woff'), url('../fonts/GOTHICB.woff2') format('woff2'), url('../fonts/GOTHICB.TTF') format('truetype'), url('../fonts/GOTHICB.otf') format('OpenType');
@@ -33,16 +36,17 @@ body {
 	background: #eceeef;
 	padding: 0 15px;
 }
+
 .login {
 	overflow: hidden;
 	border-radius: 15px;
 	box-shadow: 0px 22px 76px 0px rgba(159, 159, 159, 0.44);
 	-webkit-animation: scaling .5s ease-in-out 0s 1 alternate both;
-	        animation: scaling .5s ease-in-out 0s 1 alternate both;
-	  
+	animation: scaling .5s ease-in-out 0s 1 alternate both;
+
 	&__header {
 		height: 200px;
-		background:linear-gradient(rgba($blue, .75),rgba($blue, .75)), url("/login/img/bg/duet_background.jpg") center/cover no-repeat;
+		background: linear-gradient(rgba($blue, .75), rgba($blue, .75)), url("/img/bg/duet_background.jpg") center/cover no-repeat;
 	}
 
 	&__image {
@@ -94,13 +98,13 @@ body {
 			color: #041548;
 			font-size: 24px;
 			height: 40px;
-			border-bottom: 2px solid #cfcfcf;			
+			border-bottom: 2px solid #cfcfcf;
 			border-radius: 3px 3px 0 0;
 
 			&:invalid {
 				border-color: red;
 			}
-			
+
 			&::placeholder {
 				color: #808080;
 			}
@@ -111,6 +115,7 @@ body {
 		display: flex;
 		justify-content: space-between;
 		margin: 0 0 30px 0;
+
 		&_success {
 			input {
 				border-color: green;
@@ -122,13 +127,14 @@ body {
 		display: flex;
 		justify-content: space-between;
 		position: relative;
-		
+
 		img {
 			position: absolute;
 			top: 0;
 			right: 0;
 			cursor: pointer;
 		}
+
 		&_success {
 			input {
 				border-color: green;
@@ -138,7 +144,7 @@ body {
 
 
 	&__btn {
-		
+
 		button {
 			background: $blue;
 			width: 100%;
@@ -153,21 +159,24 @@ body {
 			font-size: 30px;
 			font-weight: 700;
 			color: #ffffff;
+
 			&::after {
 				content: '';
 				position: relative;
 				top: 3px;
 				margin-left: 10px;
-				background: url("/login/img/icons/arrow.png") no-repeat;
+				background: url("/img/icons/arrow.png") no-repeat;
 				width: 30px;
-				height: 25px;				
+				height: 25px;
 			}
+
 			&:focus {
 				box-shadow: 0 0 0 3px rgba($blue, .5);
 			}
 		}
 	}
 }
+
 .errors-container {
 	position: fixed;
 	right: 0;
@@ -180,8 +189,9 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	overflow-x: hidden;
- }
- .errors-container .error-toast {
+}
+
+.errors-container .error-toast {
 	align-self: flex-end;
 	margin-bottom: 15px;
 	overflow: hidden;
@@ -192,35 +202,39 @@ body {
 	color: white;
 	border-radius: 8px;
 	-webkit-animation: show_toast 0.2s linear 1 alternate both, delete_toast 0.2s linear 5s 1 alternate both;
-			  animation: show_toast 0.2s linear 1 alternate both, delete_toast 0.2s linear 5s 1 alternate both;
- }
- .errors-container .error-toast .error-progress {
+	animation: show_toast 0.2s linear 1 alternate both, delete_toast 0.2s linear 5s 1 alternate both;
+}
+
+.errors-container .error-toast .error-progress {
 	background-color: #9c1f1f;
 	height: 4px;
 	transition: all 0.1s linear;
- }
- .errors-container .error-toast .error-text {
+}
+
+.errors-container .error-toast .error-text {
 	padding: 10px;
 	font-size: 14px;
- }
+}
 
- @keyframes show_toast {
+@keyframes show_toast {
 	from {
-	  transform: translatex(100%);
+		transform: translatex(100%);
 	}
-	to {
-	  transform: translatex(0%);
-	}
- }
 
- @keyframes delete_toast {
-	from {
-	  opacity: 1;
-	}
 	to {
-	  opacity: 0;
+		transform: translatex(0%);
 	}
- }
+}
+
+@keyframes delete_toast {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
 
 .container {
 	max-width: 553px;
@@ -243,16 +257,20 @@ body {
 	.container {
 		max-width: 100%;
 	}
+
 	.login {
 		width: 70%;
+
 		&__text {
 			p {
 				font-size: 42px;
 			}
 		}
+
 		&__body {
 			padding: 25px;
 		}
+
 		&__header {
 			height: 150px;
 		}
@@ -283,6 +301,7 @@ body {
 
 			img {
 				top: 23px;
+
 			}
 		}
 
@@ -290,6 +309,7 @@ body {
 		&__btn {
 			button {
 				font-size: 24px;
+
 				&::after {
 					top: 2px;
 				}
@@ -299,25 +319,39 @@ body {
 }
 
 @-webkit-keyframes scaling {
-	from {transform: scale(0);} 
+	from {
+		transform: scale(0);
+	}
+
 	40% {
 		transform: scale(1);
 	}
-	70%{
+
+	70% {
 		transform: scale(.75);
 	}
-	to {transform: scale(1);}
+
+	to {
+		transform: scale(1);
+	}
 }
 
 @keyframes scaling {
-	from {transform: scale(0);} 
+	from {
+		transform: scale(0);
+	}
+
 	40% {
 		transform: scale(1);
 	}
-	70%{
+
+	70% {
 		transform: scale(.75);
 	}
-	to {transform: scale(1);}
+
+	to {
+		transform: scale(1);
+	}
 }
 
 /* Smartphones 576px width */
@@ -325,6 +359,7 @@ body {
 
 	.login {
 		width: 100%;
+
 		&__userenter {
 			p {
 				font-size: 16px;
@@ -334,18 +369,19 @@ body {
 				font-size: 14px;
 			}
 		}
+
 		&__body {
 			padding: 15px;
-	}
-	&__userpass {
-		img {
-			top: 21px;
+		}
+
+		&__userpass {
+			img {
+				top: 21px;
+			}
 		}
 	}
-}
 
 }
 
 /* Mobile 340px width */
-@media screen and (max-width:340px) {
-}
+@media screen and (max-width:340px) {}
