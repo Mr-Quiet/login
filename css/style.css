@@ -18,6 +18,15 @@
 	outline: 0
 }
 
+a:active,
+a:focus {
+	outline: 0
+}
+
+header {
+	display: block
+}
+
 body,
 html {
 	height: 100%;
@@ -48,13 +57,24 @@ button::-moz-focus-inner {
 	border: 0
 }
 
+a,
+a:visited {
+	text-decoration: none
+}
+
+a:hover {
+	text-decoration: none
+}
+
 img {
 	vertical-align: top
 }
 
+a,
 body,
 div,
 form,
+header,
 html,
 img,
 p {
@@ -64,6 +84,10 @@ p {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline
+}
+
+header {
+	display: block
 }
 
 body {
@@ -202,6 +226,10 @@ body {
 	color: grey
 }
 
+.login__userenter input::placeholder {
+	color: grey
+}
+
 .login__username {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -281,6 +309,50 @@ body {
 	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 	overflow-x: hidden
+}
+
+@-webkit-keyframes show_toast {
+	from {
+		-webkit-transform: translatex(100%);
+		transform: translatex(100%)
+	}
+
+	to {
+		-webkit-transform: translatex(0);
+		transform: translatex(0)
+	}
+}
+
+@keyframes show_toast {
+	from {
+		-webkit-transform: translatex(100%);
+		transform: translatex(100%)
+	}
+
+	to {
+		-webkit-transform: translatex(0);
+		transform: translatex(0)
+	}
+}
+
+@-webkit-keyframes delete_toast {
+	from {
+		opacity: 1
+	}
+
+	to {
+		opacity: 0
+	}
+}
+
+@keyframes delete_toast {
+	from {
+		opacity: 1
+	}
+
+	to {
+		opacity: 0
+	}
 }
 
 .container {
