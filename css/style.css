@@ -73,6 +73,60 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 @font-face {
   font-family: 'Calibri';
   src: url("../fonts/CALIBRI.woff") format("woff"), url("../fonts/CALIBRI.woff2") format("woff2"), url("../fonts/CALIBRI.ttf") format("truetype"), url("../fonts/CALIBRI.otf") format("OpenType");
@@ -80,9 +134,85 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
 }
 
-.wrapper {
-  min-height: 100%;
+@font-face {
+  font-family: 'Calibri';
+  src: url("../fonts/CALIBRIB.woff") format("woff"), url("../fonts/CALIBRIB.woff2") format("woff2"), url("../fonts/CALIBRIB.ttf") format("truetype"), url("../fonts/CALIBRIB.otf") format("OpenType");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/GOTHIC.woff") format("woff"), url("../fonts/GOTHIC.woff2") format("woff2"), url("../fonts/GOTHIC.TTF") format("truetype"), url("../fonts/GOTHIC.otf") format("OpenType");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("../fonts/GOTHICB.woff") format("woff"), url("../fonts/GOTHICB.woff2") format("woff2"), url("../fonts/GOTHICB.TTF") format("truetype"), url("../fonts/GOTHICB.otf") format("OpenType");
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: #eceeef;
+  padding: 0 15px;
+}
+
+.login {
   overflow: hidden;
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 22px 76px 0px rgba(159, 159, 159, 0.44);
+          box-shadow: 0px 22px 76px 0px rgba(159, 159, 159, 0.44);
+  -webkit-animation: scaling .5s ease-in-out 0s 1 alternate both;
+  animation: scaling .5s ease-in-out 0s 1 alternate both;
+}
+
+.login__header {
+  height: 200px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 57, 119, 0.75)), to(rgba(3, 57, 119, 0.75))), url("/img/bg/duet_background.jpg") center/cover no-repeat;
+  background: linear-gradient(rgba(3, 57, 119, 0.75), rgba(3, 57, 119, 0.75)), url("/img/bg/duet_background.jpg") center/cover no-repeat;
+}
+
+.login__image {
+  width: 80px;
+  height: 40px;
+  margin: 0 auto 50px auto;
+  padding: 40px 0 0 0;
+}
+
+.login__image img {
+  width: 80px;
+  height: 40px;
+}
+
+.login__text {
+  text-align: center;
+}
+
+.login__text p {
+  font-family: "Century Gothic";
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.login__body {
+  background: #ffffff;
+  padding: 48px;
+}
+
+.login__row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,182 +222,206 @@ h1, h2, h3, h4, h5, h6 {
           flex-direction: column;
 }
 
-.header {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+.login__userenter p {
+  padding: 10px;
+  font-family: "Calibri";
+  font-size: 24px;
+  font-weight: 700;
+  color: #909090;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 100px;
+          flex: 1 0 100px;
 }
 
-.header__body {
-  border-bottom: 2px solid #f4f4f4;
-  padding: 25px 35px;
+.login__userenter input {
+  background: #f1f1f1;
+  padding: 0 10px;
+  color: #041548;
+  font-size: 24px;
+  height: 40px;
+  border-bottom: 2px solid #cfcfcf;
+  border-radius: 3px 3px 0 0;
 }
 
-.header__row {
+.login__userenter input:invalid {
+  border-color: red;
+}
+
+.login__userenter input::-webkit-input-placeholder {
+  color: #808080;
+}
+
+.login__userenter input:-ms-input-placeholder {
+  color: #808080;
+}
+
+.login__userenter input::-ms-input-placeholder {
+  color: #808080;
+}
+
+.login__userenter input::placeholder {
+  color: #808080;
+}
+
+.login__username {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin: 0 0 30px 0;
 }
 
-.header__logo {
-  cursor: default;
+.login__username_success input {
+  border-color: green;
 }
 
-.header__logo p {
-  font-family: "Calibri";
-  font-size: 24px;
-  line-height: 1.4;
-  color: #acacac;
-}
-
-.header__user {
-  cursor: pointer;
+.login__userpass {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
 }
 
-.header__user::before {
-  content: '';
-  width: 21px;
-  height: 21px;
-  top: 0;
-  left: 0;
+.login__userpass img {
   position: absolute;
-  border-radius: 50%;
-  background: url("/img/users/user.png") 100%/COVER no-repeat;
+  top: 0;
+  right: 0;
+  cursor: pointer;
 }
 
-.header__user p {
-  padding: 0 0 0 30px;
-  font-family: "Calibri";
-  font-size: 18px;
-  color: #002e60;
+.login__userpass_success input {
+  border-color: green;
 }
 
-.menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-.menu__body {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-}
-
-.menu__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100%;
-}
-
-.menu__columns {
-  padding: 40px 0 0 0;
-  background: #023976;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.menu__columns:hover .item {
-  max-width: 250px;
-}
-
-.item {
-  overflow: hidden;
-  max-width: 80px;
-  -webkit-transition-property: max-width;
-  transition-property: max-width;
-  -webkit-transition-duration: 0.5s;
-          transition-duration: 0.5s;
-}
-
-.item__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  font-family: "Calibri";
-  font-size: 24px;
-}
-
-.item__row a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 15px;
-  color: #ffffff;
-}
-
-.item__row a span {
+.login__btn button {
+  background: #033977;
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-top: 40px;
+  cursor: pointer;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 50px;
-  height: 50px;
-  margin: 0 30px 0 0;
+  font-family: "Calibri";
+  font-size: 30px;
+  font-weight: 700;
+  color: #ffffff;
 }
 
-.item__row a span svg {
-  fill: white;
+.login__btn button::after {
+  content: '';
+  position: relative;
+  top: 3px;
+  margin-left: 10px;
+  background: url("/img/icons/arrow.png") no-repeat;
+  width: 30px;
+  height: 25px;
 }
 
-.item__row_active a {
-  background: #002e60;
+.login__btn button:focus {
+  -webkit-box-shadow: 0 0 0 3px rgba(3, 57, 119, 0.5);
+          box-shadow: 0 0 0 3px rgba(3, 57, 119, 0.5);
 }
 
-.item__row_active a span {
-  background: white;
-  border-radius: 30px;
-}
-
-.item__row_active a span svg {
-  fill: #002e60;
-}
-
-.item__row:hover a {
-  background: #02366d;
-}
-
-.table {
+.errors-container {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  max-height: 100vh;
+  max-width: 320px;
+  width: 100%;
+  padding: 0 15px;
+  overflow-y: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-x: hidden;
 }
 
-.btn__row {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.errors-container .error-toast {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 15px;
+  overflow: hidden;
+  width: 100%;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #c62828;
+  color: white;
+  border-radius: 8px;
+  -webkit-animation: show_toast 0.2s linear 1 alternate both, delete_toast 0.2s linear 5s 1 alternate both;
+  animation: show_toast 0.2s linear 1 alternate both, delete_toast 0.2s linear 5s 1 alternate both;
+}
+
+.errors-container .error-toast .error-progress {
+  background-color: #9c1f1f;
+  height: 4px;
+  -webkit-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+
+.errors-container .error-toast .error-text {
+  padding: 10px;
+  font-size: 14px;
+}
+
+@-webkit-keyframes show_toast {
+  from {
+    -webkit-transform: translatex(100%);
+            transform: translatex(100%);
+  }
+  to {
+    -webkit-transform: translatex(0%);
+            transform: translatex(0%);
+  }
+}
+
+@keyframes show_toast {
+  from {
+    -webkit-transform: translatex(100%);
+            transform: translatex(100%);
+  }
+  to {
+    -webkit-transform: translatex(0%);
+            transform: translatex(0%);
+  }
+}
+
+@-webkit-keyframes delete_toast {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes delete_toast {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.container {
+  max-width: 553px;
+  margin: 0 auto;
 }
 
 /* Laptops 1440px width */
@@ -277,11 +431,114 @@ h1, h2, h3, h4, h5, h6 {
 /* @media screen and (max-width:992px) {
 } */
 /* Talet 768px width */
-/* @media screen and (max-width:768px) {
-} */
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+  .login {
+    width: 70%;
+  }
+  .login__text p {
+    font-size: 42px;
+  }
+  .login__body {
+    padding: 25px;
+  }
+  .login__header {
+    height: 150px;
+  }
+  .login__image {
+    margin: 0 auto 35px auto;
+    padding: 20px 0 0 0;
+  }
+  .login__userenter p {
+    font-size: 18px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    padding: 0 0 5px 2px;
+  }
+  .login__userenter input {
+    font-size: 16px;
+  }
+  .login__username {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .login__userpass {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .login__userpass img {
+    top: 23px;
+  }
+  .login__btn button {
+    font-size: 24px;
+  }
+  .login__btn button::after {
+    top: 2px;
+  }
+}
+
+@-webkit-keyframes scaling {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  70% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaling {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  70% {
+    -webkit-transform: scale(0.75);
+            transform: scale(0.75);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 /* Smartphones 576px width */
-/* @media screen and (max-width:576px) {
-} */
+@media screen and (max-width: 576px) {
+  .login {
+    width: 100%;
+  }
+  .login__userenter p {
+    font-size: 16px;
+  }
+  .login__userenter input {
+    font-size: 14px;
+  }
+  .login__body {
+    padding: 15px;
+  }
+  .login__userpass img {
+    top: 21px;
+  }
+}
+
 /* Mobile 340px width */
-/* @media screen and (max-width:340px) {
-} */
