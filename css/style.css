@@ -147,8 +147,8 @@ body {
 
 .login__header {
 	height: 200px;
-	background: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 57, 119, .75)), to(rgba(3, 57, 119, .75))), url(/img/bg/duet_background.jpg) center/cover no-repeat;
-	background: linear-gradient(rgba(3, 57, 119, .75), rgba(3, 57, 119, .75)), url(/img/bg/duet_background.jpg) center/cover no-repeat
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(3, 57, 119, .75)), to(rgba(3, 57, 119, .75))), url(/login/img/bg/duet_background.jpg) center/cover no-repeat;
+	background: linear-gradient(rgba(3, 57, 119, .75), rgba(3, 57, 119, .75)), url(/login/img/bg/duet_background.jpg) center/cover no-repeat
 }
 
 .login__image {
@@ -191,7 +191,7 @@ body {
 
 .login__userenter p {
 	padding: 10px;
-	font-family: Calibri;
+	font-family: "Calibri";
 	font-size: 24px;
 	font-weight: 700;
 	color: #909090;
@@ -284,7 +284,7 @@ body {
 	position: relative;
 	top: 3px;
 	margin-left: 10px;
-	background: url(/img/icons/arrow.png) no-repeat;
+	background: url(/login/img/icons/arrow.png) no-repeat;
 	width: 30px;
 	height: 25px
 }
